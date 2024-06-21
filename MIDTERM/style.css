@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.index_body {
+    background-color: rgb(230, 236, 240);
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    background-image: url(img/background\(1\).jpg);
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login_body {
+    background-color: rgb(230, 236, 240);
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    background-image: url(img/background\(2\).jpg);
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login_layout {
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 400px;
+    height: 420px;
+    background-color: rgba(85, 85, 85, 0.500);
+    backdrop-filter: blur(3px);
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+}
+
+.login_layout .head {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 25px;
+    color: white;
+    text-align: center;
+}
+
+.login_layout .container .input_username,
+.input_password {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.login_layout .container .button {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.login_layout .container .forgot_password {
+    width: 70%;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.login_layout .container .forgot_password a {
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 20px;
+}
+
+.login_layout input {
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.login_layout label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.login_layout input[type="text"],
+input[type="password"] {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.login_layout .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.register_layout .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login_layout button {
+    cursor: pointer;
+    height: 40px;
+    width: 130px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffff;
+    background-color: #0090EC;
+}
+
+.login_layout button a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.input_password {
+    position: relative;
+    flex-direction: column;;
+}
+
+.pass_icon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 34.5%;
+    color: #009dff;
+    font-size: 20px;
+}
+
+.input_confirm_password {
+    position: relative;
+    flex-direction: column;;
+}
+
+.confirm_password {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 34.5%;
+    color: #009dff;
+    font-size: 20px;
+}
+
+
+
+/* Hover */
+
+.button button[type="submit"]:hover {
+    color: #0090EC;
+    background-color: #ffffff;
+}
+
+.login_layout .forgot_password a:hover {
+    color: #009dff;
+}
+
+/* Index STYLE */
+
+.head-nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.head-nav a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/* Header and Navigation */
+
+.head-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(112, 112, 112, 0.199);
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+.head {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+.toggle {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.toggle a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.toggle a:hover {
+    color: #009dff;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 770px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* Register STYLE */
+.register_body {
+    background-color: rgb(230, 236, 240);
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    background-image: url(img/background\(2\).jpg);
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.register_layout {
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 400px;
+    height: 420px;
+    background-color: rgba(85, 85, 85, 0.500);
+    backdrop-filter: blur(3px);
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+}
+
+/* Register STYLE */
+
+.register_body {
+    background-color: rgb(230, 236, 240);
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    background-image: url(img/background\(2\).jpg);
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.register_layout {
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 400px;
+    height: 650px;
+    background-color: rgba(85, 85, 85, 0.500);
+    backdrop-filter: blur(3px);
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+}
+
+.register_layout .head {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.register_layout .container .input_firstname,
+.input_lastname,
+.input_email,
+.input_password,
+.input_confirm_password {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.register_layout .container .button {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.register_layout .container .forgot_password {
+    width: 70%;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.register_layout .container .forgot_password a {
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 20px;
+}
+
+.register_layout input {
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.register_layout label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.register_layout input[type="text"],
+input[type="email"],
+input[type="password"] {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.register_layout button {
+    cursor: pointer;
+    height: 40px;
+    width: 130px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffff;
+    background-color: #0090EC;
+}
+
+.register_layout button a {
+    text-decoration: none;
+    color: #ffffff;
+}

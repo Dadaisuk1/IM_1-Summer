@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Register</title>
+</head>
+<body class="register_body">
+    <form action="" id="register">
+        <div class="register_layout">
+            <div class="head">
+                <h1>REGISTER</h1>
+            </div>
+            <div class="container">
+                <div class="input_firstname">
+                    <label>Firstname</label><br>
+                    <input type="text" placeholder="Enter firstname" id="firstname" required>
+                </div>
+
+                <div class="input_lastname">
+                    <label>Lastname</label><br>
+                    <input type="text" placeholder="Enter lastname" id="lastname" required>
+                </div>
+
+                <div class="input_email">
+                    <label>Email / Username</label><br>
+                    <input type="email" placeholder="Enter email / username" id="email" required>
+                </div>
+
+                <div class="input_password">
+                    <label>Password</label><br>
+                    <input type="password" placeholder="Enter password" id="password" required>
+                    <span class="material-symbols-outlined pass_icon" onclick="togglePasswordVisibility('password')" id="pass_icon">
+                        visibility_off
+                    </span>
+                </div>
+
+                <div class="input_confirm_password">
+                    <label>Confirm Password</label><br>
+                    <input type="password" placeholder="Enter confirm password" id="confirm_password" required>
+                    <span class="material-symbols-outlined pass_icon" onclick="togglePasswordVisibility('confirm_password')" id="confirm_pass_icon">
+                        visibility_off
+                    </span>
+                </div>
+
+                <div class="buttons">
+                    <div class="button">
+                        <button type="submit" name="register_button" id="register_button">Register</button>
+                    </div>
+    
+                    <div class="button">
+                        <button type="submit" name="cancel" id="cancel_button"> <a href="index.html">Cancel</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        const registerForm = document.getElementById('register');
+        const firstnameInput = document.getElementById('firstname');
+        const lastnameInput = document.getElementById('lastname');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm_password');
+        const registerButton = document.getElementById('register_button');
+
+        registerButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (firstnameInput.value === '' || lastnameInput.value === '' || emailInput.value === '' || passwordInput.value === '' || confirmPasswordInput.value === '') {
+                alert('Please fill in all required fields');
+            } else if (passwordInput.value!== confirmPasswordInput.value) {
+                alert('Passwords do not match');
+            } else {
+                // Submit the form
+                registerForm.submit();
+            }
+        });
+
+        function togglePasswordVisibility(id) {
+            var passwordInput = document.getElementById(id);
+            var passIcon = document.getElementById(id === 'password'? 'pass_icon' : 'confirm_pass_icon');
+            
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passIcon.textContent = "visibility";
+            } else {
+                passwordInput.type = "password";
+                passIcon.textContent = "visibility_off";
+            }
+        }
+    </script>
+</body>
+</html>
