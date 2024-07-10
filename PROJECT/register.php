@@ -15,8 +15,22 @@
 	<h2>User Information</h2>
 
 	<form>
-		<label for="username">User Name</label>
-		<input type="text" name="username" id="username" required>
+		<label for="firstname">First Name</label>
+		<input type="text" name="firstname" id="firstname" required>
+		<br>
+		<label for="lastname">Last Name</label>
+		<input type="text" name="lastname" id="lastname" required>
+		<br>
+		<label for="middlename">Middle Name</label>
+		<input type="text" name="middlename" id="middlename" required>
+		<br>
+		<label for="gender">Gender</label>
+		<select name="gender" id="gender">
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+		</select>
+		<label for="mobilenumber">Mobile Number</label>
+		<input type="text" name="mobilenumber" id="mobilenumber" required>
 		<br>
 		<label for="emailaddress">Email Address</label>
 		<input type="text" name="emailaddress" id="emailaddress" required>
