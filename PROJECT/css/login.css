@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    color: #ffffff;
+}
+.container input[type='text'],
+input[type='password'] {
+    color: #000000;
+}
+
+.buttons button {
+    background-color: #FF5E19;
+    padding: 5px 20px 5px;
+    border-radius: 200px;
+}

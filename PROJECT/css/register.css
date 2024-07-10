@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+}
+
+body {
+    color: black;
+    background-color: #030303;    
+}
+
+.container {
+    background-color: blue;
+}
+
+.form_container input[type="text"],
+input[type="password"], input[type="email"] {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 10px;
+    color: #030303;
+}
