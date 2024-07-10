@@ -1,3 +1,7 @@
+<?php
+	require_once 'includes/header.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,3 +28,7 @@
 	</form>
 </body>
 </html>
+
+<?php
+	require_once 'includes/footer.php';
+?>
