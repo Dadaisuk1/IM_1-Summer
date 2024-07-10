@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
-    
     <div class="navigation_bar">
         <div class="logo">
             <img src="images/Tupac_logo.png" alt="logo">
