@@ -1,4 +1,5 @@
 <?php
+	include 'connect.php';
 	require_once 'includes/header.php';
 ?>
 
@@ -18,7 +19,7 @@
 		</div>
 
 		<div class="form_container">
-			<form action="POSt">
+			<form method="POSt">
 				<label>First Name</label>
 				<input type="text" name="txtfname">
 
@@ -38,7 +39,7 @@
 				</select>
 
 				<label>Mobile Number</label>
-				<input type="text" name="txtmobile" value="+63">
+				<input type="text" name="txtmobile" value="+63" maxlength="13">
 
 				<label>Email</label>
 				<input type="email" name="txtemail">
@@ -50,15 +51,25 @@
 </body>
 </html>
 
-<?php
-	if (isset($_POST['bttnRegister'])) {
+<?php	
+	session_start();
+
+	if (isset($_POST['bttnRegister'])){	
 		$fname = $_POST['txtfname'];
 		$mname = $_POST['txtmname'];
-		$lname = $_POST['lname'];
+		$lname = $_POST['txtlname'];
 		$pword = $_POST['password'];
 		$gender = $_POST['gender'];
 		$mobile = $_POST['txtmobile'];
 		$email = $_POST['txtemail'];
+
+		if (empty($fname) || empty($lname) || empty($gender) || empty($mobile) || empty($email) || empty($pword)) {
+			echo "<script>
+				alert('Some fields are empty!');
+			</script>";
+			header("Location: register.php");
+			exit();
+		}
 
 		$sql1 = "Insert into tbluser (fname, mname, lname, password, gender, mobilenumber, email) values ('".$fname."', '".$mname."', '".$lname."', '".$pword."', '".$gender."', '".$mobile."', '".$email."')";
 		mysqli_query($connection, $sql1);
@@ -70,24 +81,16 @@
 		if ($row == 0) {
 			$sql = "Insert into tblaccount (email, password) values ('".$email."', '".$pword."')";
 			mysqli_query($connection, $sql);
-			echo "<script language = 'javascript'>
+			echo "<script language='javascript'>
 				alert('New Record Saved.');
 			</script>";
 			header("Location: register.php");
+			exit();
 		} else {
-			echo "<script language = 'javascrip'>
+			echo "<script language='javascript'>
 				alert('Email already existing');
 			</script>";
 		}
-
- 		if(empty($fname) || empty($lname) || empty($gender) || empty($mobilenumber) || empty($email) || empty($email) || empty($pword)){
-            echo "<script language='javascript'>
-            	alert('Some Fields Are Empty');
-            </script>";
-            header("Location: register.php");
-        }
- 
-
 	}
 ?>
 

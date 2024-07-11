@@ -60,18 +60,6 @@
     font-weight: 400;
 }
 
-.head_nav a:hover,
-.navigation_button a:hover {
-    cursor: pointer;
-    color: #FF5E19;
-    transition-delay: 1.3ms;
-}
-
-.login_button:hover,
-.register_button:hover {
-    cursor: pointer;
-    background-color: #ffffff;
-}
 
 .logo img {
     width: auto;
