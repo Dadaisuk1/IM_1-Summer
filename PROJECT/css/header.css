@@ -41,7 +41,7 @@
 }
 
 .register_button {
-    background-color: #cfb1a5;
+    background-color: #FF5E19;
     padding: 5px 20px 5px;
     border-radius: 200px;
 }
@@ -60,6 +60,19 @@
     font-weight: 400;
 }
 
+.head_nav a:hover,
+.navigation_button a:hover {
+    cursor: pointer;
+    color: #FF5E19;
+    transition-delay: 1.3ms;
+}
+
+.login_button:hover,
+.register_button:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #FF5E19;
+}
 
 .logo img {
     width: auto;
