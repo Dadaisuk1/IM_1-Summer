@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+}
+
+.container_footer {
+    width: 100%;
+    padding: 30px 15% 50px;
+    margin-top: 20px;
+    border-style: solid;
+    border-color: #ffffff62;
+    background-color: rgb(22, 22, 22);
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    border-width: .01px;
+}
+
+.container_footer p {
+    font-weight: 400;
+    font-size: 16px;
+}
