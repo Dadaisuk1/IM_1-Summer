@@ -1,7 +1,3 @@
-<?php
-    // include 'connect.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,28 +6,31 @@
     <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
-    <div class="navigation_bar">
-        <div class="logo">
-            <img src="images/Tupac_logo.png" alt="logo">
-        </div>
+    <div class="nav_wrapper">
+        <div class="navigation_bar">
+            <div class="logo">
+                <img src="images/Tupac_logo.png" alt="logo">
+            </div>
 
-        <div class="head_nav">
-            <a href="home.php">Home</a>
-            <a href="#">Trainor</a>
-            <a href="#">Membership</a>
-            <a href="#">Contact</a>
-            <a href="#">About Us</a>
-    
-            <div class="navigation_button">
-                <div class="login_button">
-                    <a href="login.php">Login</a>
+            <div class="head_nav">
+                <div class="a">
+                    <a href="home.php">Home</a>
+                    <a href="#">Trainor</a>
+                    <a href="#">Membership</a>
+                    <a href="#">Contact</a>
+                    <a href="#">About Us</a>
                 </div>
-                <div class="register_button">
-                    <a href="register.php">Register</a>
+        
+                <div class="navigation_button">
+                    <div class="login_button">
+                        <a href="login.php">Login</a>
+                    </div>
+                    <div class="register_button">
+                        <a href="register.php">Register</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>
