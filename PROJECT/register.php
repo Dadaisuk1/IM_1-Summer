@@ -48,6 +48,11 @@
 			</form>
 		</div>
 	</div>
+	<script src="js/alerts.js"></script> <!-- Include JavaScript file -->
+	<script>
+		// Pass PHP variable to JavaScript
+		let recordSaved = <?php echo json_encode($recordSaved); ?>;
+	</script>
 </body>
 </html>
 
@@ -81,10 +86,10 @@
 		if ($row == 0) {
 			$sql = "Insert into tblaccount (email, password) values ('".$email."', '".$pword."')";
 			mysqli_query($connection, $sql);
-			echo "<script language='javascript'>
-				alert('New Record Saved.');
+			echo "<script>
+				alert('New Record Added');
 			</script>";
-			header("Location: register.php");
+			header("Location: login.php");
 			exit();
 		} else {
 			echo "<script language='javascript'>

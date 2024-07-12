@@ -9,7 +9,11 @@
 }
 
 body {
-    background-color: #FF5E19;
+    background: rgba(0, 0, 0, 0.179);
+    background: url('../images/gym_muscles.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: absolute;
+    backdrop-filter: brightness(50%);
     margin: 0;
 }
 
@@ -17,7 +21,7 @@ body {
     margin: auto;
     margin-top: 20px;
     width: 500px;
-    background-color: #e6e6e600;
+    background-color: #e6e6e63a;
     color: rgb(0, 0, 0);
     padding: 30px;
     border-radius: 20px;

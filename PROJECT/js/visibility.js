@@ -16,14 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function togglePasswordVisibility(id) {
-    var passwordInput = document.getElementById(id);
-    var passIcon = document.getElementById(id === 'password' ? 'pass_icon' : 'confirm_pass_icon');
-
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        passIcon.textContent = "visibility";
+    const passwordField = document.getElementById(id);
+    const icon = document.getElementById('pass_icon');
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        icon.textContent = 'visibility';
     } else {
-        passwordInput.type = "password";
-        passIcon.textContent = "visibility_off";
+        passwordField.type = 'password';
+        icon.textContent = 'visibility_off';
     }
 }
