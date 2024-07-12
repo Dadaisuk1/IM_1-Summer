@@ -7,13 +7,30 @@
 </head>
 <body>
     <div class="container_footer">
-        <div class="maker">
-            <p>Darwin Darryl Jean Largoza</p>
-            <p>Spencer Z. Nacario</p>
-        </div>
+        <div class="footer_wrapper">
+            <div class="first_column">
+                <img src="images/Tupac_logo.png" alt="logo">
 
-        <div class="socials">
-            
+                <div class="developer">
+                    <p>Developed by:</p>
+                    <p>Darwin Darryl Jean Largoza</p>
+                    <p>Spencer Z. Nacario</p>
+                </div>
+                
+                <div class="socials">
+                    <div class="facebook">
+                        <img src="images/facebook.png" alt="logo">
+                    </div>
+                    <div class="twitter">
+                        <img src="images/twitter.png" alt="logo">
+                    </div>
+                    <div class="link">
+                        <img src="images/linkedin.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+
+
         </div>
 
     </div>

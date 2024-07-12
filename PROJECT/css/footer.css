@@ -10,11 +10,11 @@
 
 .container_footer {
     width: 100%;
-    padding: 30px 15% 50px;
+    padding: 30px 10% 50px;
     margin-top: 20px;
     border-style: solid;
     border-color: #ffffff62;
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(58, 58, 58);
     border-right: none;
     border-left: none;
     border-bottom: none;
@@ -24,4 +24,39 @@
 .container_footer p {
     font-weight: 400;
     font-size: 16px;
+}
+
+.container_footer img {
+    width: 100px;
+}
+
+.footer_wrapper .socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer_wrapper .socials img {
+    width: 30px;
+    height: auto;
+}
+
+.socials .facebook {
+    border: solid 1px rgb(131, 129, 129);
+    padding: 10px 12px;
+    border-radius: 100px;
+    justify-content: center;
+}
+
+.socials .twitter {
+    border: solid 1px rgb(131, 129, 129);
+    padding: 10px 12px;
+    border-radius: 100px;
+    justify-content: center;
+}
+
+.socials .link {
+    border: solid 1px rgb(131, 129, 129);
+    padding: 10px 12px;
+    border-radius: 100px;
+    justify-content: center;
 }
