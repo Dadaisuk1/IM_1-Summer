@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include 'connect.php';
     require_once 'includes/header.php';
 ?>
@@ -64,8 +65,6 @@
 </html>
 
 <?php
-    session_start();
-
     if (isset($_POST['bttnRegister'])) {
         $fname = $_POST['txtfname'];
         $mname = $_POST['txtmname'];
@@ -79,6 +78,7 @@
             echo "<script>
                 alert('Some fields are empty!');
             </script>";
+            header("Location: register.php");
             exit();
         }
 
@@ -96,15 +96,20 @@
                 echo "<script>
                     alert('New Record Added');
                 </script>";
+                header("Location: login.php");  
+                exit();
             } else {
                 echo "<script>
                     alert('Email already existing');
                 </script>";
+                header("Location: register.php");
+                exit();
             }
         } catch (mysqli_sql_exception $e) {
             echo "<script>
                 alert('Email already existing');
             </script>";
+            header("Location: register.php");
         } catch (Exception $e) {
             echo "<script>
                 alert('An error occurred: {$e->getMessage()}');
