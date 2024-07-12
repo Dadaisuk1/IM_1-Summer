@@ -82,39 +82,62 @@
             exit();
         }
 
-        try {
-            $sql1 = "INSERT INTO tbluser (fname, mname, lname, password, gender, mobilenumber, email) VALUES ('$fname', '$mname', '$lname', '$pword', '$gender', '$mobile', '$email')";
+        $sql1 = "INSERT INTO tbluser (fname, mname, lname, password, gender, mobilenumber, email) VALUES ('$fname', '$mname', '$lname', '$pword', '$gender', '$mobile', '$email')";
             mysqli_query($connection, $sql1);
 
             $sql2 = "SELECT * FROM tblaccount WHERE email = '$email'";
             $result = mysqli_query($connection, $sql2);
             $row = mysqli_num_rows($result);
 
-            if ($row == 0) {
-                $sql = "INSERT INTO tblaccount (email, password) VALUES ('$email', '$pword')";
-                mysqli_query($connection, $sql);
-                echo "<script>
-                    alert('New Record Added');
-                </script>";
-                header("Location: login.php");  
-                exit();
-            } else {
-                echo "<script>
-                    alert('Email already existing');
-                </script>";
-                header("Location: register.php");
-                exit();
-            }
-        } catch (mysqli_sql_exception $e) {
+        if ($row == 0) {
+            $sql = "INSERT INTO tblaccount (email, password) VALUES ('$email', '$pword')";
+            mysqli_query($connection, $sql);
+            echo "<script>
+                alert('New Record Added');
+            </script>";
+            header("Location: login.php");  
+            exit();
+        } else {
             echo "<script>
                 alert('Email already existing');
             </script>";
             header("Location: register.php");
-        } catch (Exception $e) {
-            echo "<script>
-                alert('An error occurred: {$e->getMessage()}');
-            </script>";
+            exit();
         }
+
+        // try {
+        //     $sql1 = "INSERT INTO tbluser (fname, mname, lname, password, gender, mobilenumber, email) VALUES ('$fname', '$mname', '$lname', '$pword', '$gender', '$mobile', '$email')";
+        //     mysqli_query($connection, $sql1);
+
+        //     $sql2 = "SELECT * FROM tblaccount WHERE email = '$email'";
+        //     $result = mysqli_query($connection, $sql2);
+        //     $row = mysqli_num_rows($result);
+
+        //     if ($row == 0) {
+        //         $sql = "INSERT INTO tblaccount (email, password) VALUES ('$email', '$pword')";
+        //         mysqli_query($connection, $sql);
+        //         echo "<script>
+        //             alert('New Record Added');
+        //         </script>";
+        //         header("Location: login.php");  
+        //         exit();
+        //     } else {
+        //         echo "<script>
+        //             alert('Email already existing');
+        //         </script>";
+        //         header("Location: register.php");
+        //         exit();
+        //     }
+        // } catch (mysqli_sql_exception $e) {
+        //     echo "<script>
+        //         alert('Email already existing');
+        //     </script>";
+        //     header("Location: register.php");
+        // } catch (Exception $e) {
+        //     echo "<script>
+        //         alert('An error occurred: {$e->getMessage()}');
+        //     </script>";
+        // }
     }
 ?>
 
