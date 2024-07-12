@@ -9,9 +9,12 @@
 }
 
 body {
-    /* background-color: #030303; */
-    background-image: url(images/gym_muscles.jpg);
+    
     margin: 0;
+}
+
+.background {
+    background-image: url(images/gym_muscles.jpg);
 }
 
 .container {

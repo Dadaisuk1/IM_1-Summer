@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="css/register.css">
 	<title>Register</title>
 </head>
-<body>
+<body class="background">
 	<div class="container">
 		<div class="header">
 			<h1>REGISTRATION</h1>
