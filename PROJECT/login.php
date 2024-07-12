@@ -66,21 +66,24 @@
         $password = $_POST['txtpassword'];
 
         // Check tbluseraccount if username is existing
-        $sql = "SELECT * FROM tblaccount WHERE email = '$email'";
-        $result = mysqli_query($connection, $sql);
 
-        if ($result && mysqli_num_rows($result) > 0) {
-            $row = mysqli_fetch_assoc($result);
+        try {
+            $sql1 = "INSERT INTO tbluser (fname, mname, lname, password, gender, mobilenumber, email) VALUES ('$fname', '$mname', '$lname', '$pword', '$gender', '$mobile', '$email')";
+            mysqli_query($connection, $sql1);
+            $sql = "SELECT * FROM tblaccount WHERE email = '$email'";
+            $result = mysqli_query($connection, $sql);
 
-            if ($row['password'] === $password) {
-                $_SESSION['email'] = $row['email'];
-                header("Location: home.php");
-                exit();
+            if ($row == 0) {
+                $sql = "INSERT INTO tblaccount (email, password) VALUES ('$email', '$pword')";
+                mysqli_query($connection, $sql);
+                $recordSaved = true;
             } else {
-                echo "<script>alert('Incorrect password');</script>";
+                throw new Exception('Email already existing');
             }
-        } else {
-            echo "<script>alert('Email not existing');</script>";
+        } catch (mysqli_sql_exception $e) {
+            $errorMsg = 'Email already existing';
+        } catch (Exception $e) {
+            $errorMsg = $e->getMessage();
         }
     }
 ?>
