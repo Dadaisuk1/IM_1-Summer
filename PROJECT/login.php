@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include 'connect.php';
     require_once 'includes/header.php';
 ?>
@@ -59,31 +60,29 @@
 </html>
 
 <?php
-    session_start();
-
     if(isset($_POST['bttnLogin'])){
         $email = $_POST['txtemail'];
         $password = $_POST['txtpassword'];
 
         // Check tbluseraccount if username is existing
 
-        try {
-            $sql1 = "INSERT INTO tbluser (fname, mname, lname, password, gender, mobilenumber, email) VALUES ('$fname', '$mname', '$lname', '$pword', '$gender', '$mobile', '$email')";
-            mysqli_query($connection, $sql1);
-            $sql = "SELECT * FROM tblaccount WHERE email = '$email'";
-            $result = mysqli_query($connection, $sql);
+        $sql = "SELECT * FROM tblaccount WHERE email = '$email'";
+        $result = mysqli_query($connection, $sql);
 
-            if ($row == 0) {
-                $sql = "INSERT INTO tblaccount (email, password) VALUES ('$email', '$pword')";
-                mysqli_query($connection, $sql);
-                $recordSaved = true;
-            } else {
-                throw new Exception('Email already existing');
-            }
-        } catch (mysqli_sql_exception $e) {
-            $errorMsg = 'Email already existing';
-        } catch (Exception $e) {
-            $errorMsg = $e->getMessage();
+        $count = mysqli_num_rows($result);
+	    $row = mysqli_fetch_array($result);
+
+        if($count == 0){
+            echo "<script language='javascript'>
+                        alert('Email does not exist.');
+                  </script>";
+        }else if ($row[2] != $password) {
+            echo "<script language='javascript'>
+                        alert('Incorrect password');
+                  </script>";
+        } else {
+            $_SESSION['email'] = $row[0];
+            header("location: home.php");
         }
     }
 ?>
