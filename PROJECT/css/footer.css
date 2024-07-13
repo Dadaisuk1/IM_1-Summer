@@ -10,7 +10,7 @@
 
 .container_footer {
     width: 100%;
-    padding: 30px 10% 50px;
+    padding: 30px 10%;
     margin-top: 20px;
     border-style: solid;
     border-color: #ffffff62;
@@ -40,6 +40,10 @@
     height: auto;
 }
 
+.socials {
+    margin-top: 3ch;
+}
+
 .socials .facebook {
     border: solid 1px rgb(131, 129, 129);
     padding: 10px 12px;
@@ -59,4 +63,22 @@
     padding: 10px 12px;
     border-radius: 100px;
     justify-content: center;
+}
+
+.socials .link:hover,
+.socials .facebook:hover,
+.socials .twitter:hover {
+    cursor: pointer;
+    background-color: #c9c9c974;
+    transition: all .3s ease;   
+}  
+
+.copyright {
+    text-align: center;
+}
+
+.copyright p {
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 200;
 }

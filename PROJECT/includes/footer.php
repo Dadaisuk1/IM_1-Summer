@@ -19,17 +19,26 @@
                 
                 <div class="socials">
                     <div class="facebook">
-                        <img src="images/facebook.png" alt="logo">
+                        <a href="#">
+                            <img src="images/facebook.png" alt="logo">
+                        </a>
                     </div>
                     <div class="twitter">
-                        <img src="images/twitter.png" alt="logo">
+                        <a href="#">
+                            <img src="images/twitter.png" alt="logo">
+                        </a>
                     </div>
                     <div class="link">
-                        <img src="images/linkedin.png" alt="logo">
+                        <a href="#">
+                            <img src="images/linkedin.png" alt="logo">
+                        </a>
                     </div>
                 </div>
             </div>
 
+            <div class="copyright">
+                <p>Copyright © 2024 Tupac Club. All Rights Reserved.</p>
+            </div>
 
         </div>
 

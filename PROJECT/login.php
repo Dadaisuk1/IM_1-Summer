@@ -24,13 +24,13 @@
                 <div class="container">
                     <div class="input_email">
                         <label>Username</label>
-                        <input type="text" placeholder="Enter email address" name="txtemail" required>
+                        <input type="text" placeholder="Enter email address" name="txtemail">
                     </div>
 
                     <div class="input_password">
                         <label>Password</label>
                         <div class="password_container">
-                            <input type="password" placeholder="Enter password" name="txtpassword" id="password" required>
+                            <input type="password" placeholder="Enter password" name="txtpassword" id="password">
                             <span class="material-symbols-outlined pass_icon" onclick="togglePasswordVisibility('password')" id="pass_icon">
                                 visibility_off
                             </span>
@@ -65,6 +65,12 @@
         $password = $_POST['txtpassword'];
 
         // Check tbluseraccount if username is existing
+
+        if (empty($email)) {
+            echo "<script>
+                alert('Please fill the email.');
+            </script>";
+        }
 
         $sql = "SELECT * FROM tblaccount WHERE email = '$email'";
         $result = mysqli_query($connection, $sql);
