@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+@font-face {
+    font-family: "FF Mark W05";
+    src: url(https://lolstatic-a.akamaihd.net/accounts-fonts/FFMarkW05-Ultra.f4c089710fab9b5bf7a12703bed83b8a.woff2) format("woff2"), url(https://lolstatic-a.akamaihd.net/accounts-fonts/FFMarkW05-Ultra.720bdcb352f14de2f474315da59a20c5.woff) format("woff"), url(https://lolstatic-a.akamaihd.net/accounts-fonts/FFMarkW05-Ultra.91a91bc3cd2163aae787cc4d4f955c7f.ttf) format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FF5E19;
+    --text-color: #fff;
+}
+
+body {
+    max-width: 1600px;
+    background: url(https://cdn.prod.website-files.com/655f1188cf5e283d9d642d99/65ba5ebf6624166ae66b62fa_HERO-IMAGE-BACKGROUND.webp) no-repeat center center fixed;
+    background-size: cover;
+}
+
+img {
+    width: 100%;
+}
+
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    padding: 2rem 10rem;
+}
+
+.navbar .img-logo img {
+    width: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.register-container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.left-container {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-container h1 {
+    display: block;
+    font-family: 'FF Mark W05', sans-serif;
+    text-align: left;
+    justify-content: center;
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.left-container span {
+    display: flex;
+    color: transparent;
+    border: none;
+    -webkit-text-stroke: 1px var(--primary-color);
+}
+
+.right-container {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 3rem;
+    background-color: transparent;
+    backdrop-filter: blur(3px);
+    border: solid 1px #ffffff16;
+    background-color: #908d8d20;
+    border-radius: 10px;
+}
+
+.right-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-container form .name-container, 
+.right-container form .personal-info, 
+.right-container form .password-info, 
+.right-container form .address,
+.right-container form .option-bar{
+    margin-bottom: 1rem;
+}
+
+.right-container form #barangay, #province, #city, #zip-code{
+    margin-bottom: 20px;
+}
+
+.right-container form input{
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+}
+
+.right-container form #email, #password, #confirm-password{
+    text-transform: none;
+}
+
+.right-container form label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.right-container form input,
+.right-container form select {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    width: 100%;
+}
+
+.right-container form .name-input {
+    display: flex;
+    justify-content: space-between;
+}
+.right-container form .option-bar input{
+    width: 500px;
+}
+
+.right-container form .name-input input {
+    width: calc(33.33% - 0.5rem);
+}
+
+
+.right-container form .password-info .password,
+.right-container form .password-info .confirm-password {
+    position: relative;
+}
+
+.right-container form .pass_icon {
+    position: absolute;
+    right: 10px;
+    top: 60%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+
+.right-container form .submit-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.right-container form .submit-btn button {
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-container form .submit-btn button:hover {
+    background-color: darkorange;
+}
+
+.right-container form a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 12px;
+    position: relative;
+    padding-bottom: 0.10rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.right-container form a::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #FF5E19;
+    transition: all 0.3s ease;
+}
+
+.right-container form a:hover::after{
+    width: 100%;
+}
+
+.right-container form a:hover{
+    color: var(--primary-color);
+}
+
+.right-container form .link{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px;
+}
+
+.spacing{
+    margin-top: 50px;
+}
